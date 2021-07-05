@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Task</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      font-family: Verdana, sans-serif;
+      font-size: 14px;
+    }
+
+    /* Applying Flex property */
+    .main, .menu, .menu .item, .logo, .upload, .detail > .videos {
+      display: flex;
+    }
+    .detail > .videos, input[type="url"]::placeholder, p.or, .upload {
+      font-weight: bold;
+    }
+
+    /* To align vertical and horizontal center */
+    .menu .item, .logo, .upload {   
+      justify-content: center;
+      align-items: center;
+    }
+    .main {
+      min-height: 100vh;
+    }
+    .detail {
+      background-color: #80808014;
+    }
+    .nav {
+      width: 120px;
+      box-shadow: 10px 0 15px 0 gainsboro;
+    }
+    .content {
+      width: 100%;
+    }
+    .nav > .logo {
+      height: 100px;
+    }
+    .menu {
+      flex-direction: column;
+    }
+    .menu .item {
+      height: 70px;
+      flex-direction: column;
+      border-top: 1px solid #80808017;
+    }
+    .lesson {
+      background-color: #00b8ff26;
+      border-left: 4px solid #00b8ff;
+    }
+    header {
+      width: 100%;
+      height: 100px;
+      box-shadow: inset 0 10px 10px gainsboro;
+    }
+    .detail {
+      height: 100%;
+    }
+    .detail > .videos {
+      height: 60px;
+      width: 100%;
+      padding: 30px 30px 0;
+      color: #808080fc;
+    }
+    .url-upload {
+      padding-left: 170px;
+    }
+    input[type="url"] {
+      width: 90%;
+      border-radius: 8px;
+      height: 30px;
+      border: none;
+    }
+    input[type="url"]:focus {
+      outline: none;
+    }
+    input[type="url"]::placeholder {
+      padding-left: 5px;
+      color: #000;
+    }
+    p.or {
+      width: 100%;
+      text-align: center;
+    }
+    .img-logo {
+      height: 50px;
+      width: 50px;
+    }
+    img.menu-icon {
+      height: 25px;
+      width: 25px;
+    }
+    .arrow {
+      margin-right: 5px;
+    }
+    .upload {
+      width: 150px;
+      height: 150px;
+      background-color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root" class="main">
+    <section class="nav">
+      <div class="logo">
+        <img class="img-logo" src="./logo.jpg">
+      </div>
+      <div class="menu">
+        <div class="item students">
+          <img class="menu-icon" src="./student.jpg">
+          <label>Students</label>
+        </div>
+        <div class="item lesson">
+          <img class="menu-icon" src="./lesson-plan.svg">
+          <label>Lesson Plan</label>
+        </div>
+        <div class="item settings">
+          <img class="menu-icon" src="./settings.png">
+          <label>Settings</label>
+        </div>
+        <div class="empty"></div>
+      </div>
+    </section>
+    <section class="content">
+      <header></header>
+      <div class="detail">
+        <div class="videos">
+          <div class="arrow">&#9668;</div>
+          <label>Videos</label>
+        </div>
+        <div class="url-upload">
+          <div class="url">
+            <input type="url" placeholder="Insert URL here" />
+          </div>
+          <p class="or">or</p>
+          <div class="upload">upload</div>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+
+</html>
